@@ -5,7 +5,13 @@
   "repository": "https://github.com/ginger-kang/jest-tutorial.git",
   "author": "ginger-kang <kdhoon07@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
   }
 }
