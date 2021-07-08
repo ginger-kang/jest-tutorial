@@ -5,7 +5,7 @@ describe("plus test", () => {
   });
 
   it("1+1", done => {
-    expect(1 + 1).toEqual(3);
+    expect(1 + 1).toEqual(2);
     done();
   });
 });
