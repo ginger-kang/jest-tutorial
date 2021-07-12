@@ -11,3 +11,22 @@ exports.medium = arr => {
   }
   return (arr[mid - 1] + arr[mid]) / 2;
 };
+exports.mode = arr => {
+  const counts = new Map();
+  arr.forEach(num => {
+    const count = counts.get(num) || 0;
+    counts.set(num, count + 1);
+  });
+  const maxCount = Math.max(...counts.values());
+  const modes = [...counts.keys()].filter(num => counts.get(num) === maxCount);
+
+  if (modes.length === arr.length) {
+    return null;
+  }
+
+  if (modes.length > 1) {
+    return modes;
+  }
+
+  return modes[0];
+};
